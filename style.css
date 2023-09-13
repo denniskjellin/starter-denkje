@@ -1,7 +1,11 @@
 /*
 Theme Name: Starter Dennis
-Text Domain: DennisStarter
-Version: 1.0
-Description: a starter theme for Dennis
 Author: Dennis Kjellin
+Description: Bootstrap 5 WordPress Theme
+Version: 1.0
+Text Domain: text-domain
+Tags: Bootstrap 5, Bootstrap Icons
 */
+h1 {
+  color: red;
+}
