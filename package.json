@@ -1,0 +1,27 @@
+{
+  "name": "starter-denkje",
+  "version": "1.0.0",
+  "description": "By Dennis Kjellin",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^9.0.0",
+    "sass": "^1.66.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denniskjellin/starter-denkje.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denniskjellin/starter-denkje/issues"
+  },
+  "homepage": "https://github.com/denniskjellin/starter-denkje#readme"
+}
