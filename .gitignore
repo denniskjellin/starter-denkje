@@ -14,6 +14,7 @@ yarn.lock
 Gruntfile.js
 gulpfile.js
 webpack.config.js
+/acf-json/
 
 # Ignore IDE-specific files
 .idea/
@@ -42,3 +43,4 @@ wp-content/wp-cache-config.php
 /dev/
 
 # Ignore any other files or directories you want to exclude
+
