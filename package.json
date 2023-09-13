@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/denniskjellin/starter-denkje/issues"
   },
-  "homepage": "https://github.com/denniskjellin/starter-denkje#readme"
+  "homepage": "https://github.com/denniskjellin/starter-denkje#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  }
 }
