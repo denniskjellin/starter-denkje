@@ -1,26 +1,11 @@
 /*
 Theme Name: StarterWP
-Theme URI: https://www.hnrkagency.se
-Author: Henrik Pettersson
-Author URI: http://www.hnrkagency.se
+Author: Dennis Kjellin
 Description: Bootstrap 5 WordPress Theme
-Version: 1.0.4
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0
 Text Domain: text-domain
 Tags: Bootstrap 5, Bootstrap Icons
 */
-h1 {
-  color: red;
-}
-
-h2 {
-  color: blue;
-}
-
-h3 {
-  color: green;
-}
 
 // Import Bootstrap's SCSS files
 @import "node_modules/bootstrap/scss/bootstrap";
