@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const terser = require("gulp-terser");
+const browserSync = require("browser-sync").create(); // Include BrowserSync
 
 // Define a task to compile Sass to CSS from Bootstrap
 gulp.task("bootstrap", function () {
@@ -17,7 +18,7 @@ gulp.task("bootstrap-js", function () {
   return gulp
     .src([
       "node_modules/bootstrap/dist/js/bootstrap.js",
-      "js/custom.js",
+      "js/scripts/*.js",
       // Add any other Bootstrap JavaScript files you need here
     ])
     .pipe(concat("main.js"))
@@ -33,19 +34,36 @@ gulp.task("styles", function () {
     .pipe(gulp.dest("./"));
 });
 
-// Define a task to watch for changes in Sass files
-gulp.task("watch", function () {
-  gulp.watch("sass/*.scss", gulp.series("styles"));
-  gulp.watch("node_modules/bootstrap/scss/**/*.scss", gulp.series("bootstrap"));
-  gulp.watch(
-    "node_modules/bootstrap/dist/js/bootstrap.js",
-    gulp.series("bootstrap-js")
-  );
+// Define a task to start a local development server with BrowserSync
+gulp.task("serve", function () {
+  browserSync.init({
+    server: {
+      baseDir: "./", // Serve files from the root directory
+    },
+  });
+
+  // Watch for changes and trigger a reload
+  gulp
+    .watch("sass/*.scss", gulp.series("styles"))
+    .on("change", browserSync.reload);
+  gulp
+    .watch("node_modules/bootstrap/scss/**/*.scss", gulp.series("bootstrap"))
+    .on("change", browserSync.reload);
+  gulp
+    .watch("js/scripts/*.js", gulp.series("bootstrap-js"))
+    .on("change", browserSync.reload);
+  gulp
+    .watch(
+      "node_modules/bootstrap/dist/js/**/*.js",
+      gulp.series("bootstrap-js")
+    )
+    .on("change", browserSync.reload);
+
   // Add other JavaScript files from Bootstrap to watch if needed
 });
 
-// Define a default task
+// Define a default task that includes "serve"
 gulp.task(
   "default",
-  gulp.series("bootstrap", "bootstrap-js", "styles", "watch")
+  gulp.series("bootstrap", "bootstrap-js", "styles", "serve")
 );
