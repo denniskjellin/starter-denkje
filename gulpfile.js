@@ -19,14 +19,14 @@ gulp.task("bootstrap-js", function () {
     .src([
       "node_modules/bootstrap/dist/js/bootstrap.js",
       "js/scripts/*.js",
-      // Add any other Bootstrap JavaScript files you need here
+      // Add any other Bootstrap JavaScript files I need here
     ])
     .pipe(concat("main.js"))
     .pipe(terser())
     .pipe(gulp.dest("./js")); // Output to the "js" folder
 });
 
-// Define a task to compile your custom Sass
+// Define a task to compile the custom Sass
 gulp.task("styles", function () {
   return gulp
     .src("sass/*.scss")
@@ -34,7 +34,7 @@ gulp.task("styles", function () {
     .pipe(gulp.dest("./"));
 });
 
-// Define a task to start a local development server with BrowserSync
+// Define a task to start the local development server with BrowserSync
 gulp.task("serve", function () {
   browserSync.init({
     server: {
