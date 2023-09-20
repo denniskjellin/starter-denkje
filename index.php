@@ -1,11 +1,17 @@
-<div class="card">
-    <div class="card-header">
-        Featured
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+<?php
+/**
+ * The main template file
+ *
+ * @author Dennis Kjellin
+ */
+get_header();
+?>
+<div class="container">
+<div id="primary" class="content-area">
+    <main id="main">
+        <?php the_content(); ?>
+    </main>
 </div>
+</div>
+
+<?php get_footer(); ?>
