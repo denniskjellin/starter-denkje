@@ -11859,6 +11859,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/*--------------------------------------------------------------
+# Site styles, imported in 'style.scss' in sass root.
+--------------------------------------------------------------*/
 .site-footer {
   position: absolute;
   bottom: 0;
@@ -11869,3 +11872,7 @@ textarea.form-control-lg {
 .site-header {
   background-color: #f5f5f5;
 }
+
+/*--------------------------------------------------------------
+# Site vars, imported in 'style.scss' in sass root.
+--------------------------------------------------------------*/
