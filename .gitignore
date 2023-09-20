@@ -42,4 +42,5 @@ wp-content/wp-cache-config.php
 /dev/
 
 # Ignore any other files or directories you want to exclude
+index.html
 
