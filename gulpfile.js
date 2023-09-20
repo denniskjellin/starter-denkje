@@ -13,9 +13,8 @@ gulp.task('bootstrap', function () {
 gulp.task('bootstrap-js', function () {
   return gulp
     .src([
-      'node_modules/bootstrap/dist/js/bootstrap.js',
-      'js/scripts/*.js',
-      // Add any other Bootstrap JavaScript files I need here
+      'node_modules/bootstrap/dist/js/bootstrap.bundle.js', // Use the bootstrap.bundle.js file
+      'js/scripts/*.js', // Add any other custom JavaScript files you need here
     ])
     .pipe(concat('main.js'))
     .pipe(terser())
