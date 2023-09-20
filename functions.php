@@ -1,19 +1,19 @@
 <?php
-function enqueue_custom_styles() {
-    wp_enqueue_style('custom-theme-css', get_template_directory_uri() . '/css/style.css', array(), '1.0', 'all');
-}
-
-add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
-
-// Enqueue Bootstrap CSS and JavaScript
-function enqueue_bootstrap() {
-    // Enqueue Bootstrap CSS
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css');
-    
-    // Enqueue Bootstrap JavaScript (you may also need to enqueue jQuery)
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '5.3.1', true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
 
 
-?>
+// Register Bootstrap 5 Nav Walker
+if (!function_exists('register_navwalker')) :
+    function register_navwalker()
+    {
+        require_once('inc/class-bootstrap-5-navwalker.php');
+        register_nav_menu('main-menu', 'Main menu');
+    }
+endif;
+add_action('after_setup_theme', 'register_navwalker');
+
+/*-------------------------------------------------------------
+	# Requirements
+	--------------------------------------------------------------*/
+
+// Add CSS/JS Sripts
+require get_template_directory() . '/inc/scripts.php';
