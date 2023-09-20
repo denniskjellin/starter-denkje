@@ -4,7 +4,7 @@
  * The template for displaying a single page
  *
  * @author Dennis Kjellin
- * @package StarterWP
+ * @package StarterTheme
  */
 
 get_header(); ?>

@@ -4,7 +4,7 @@
  * The template for displaying all pages
  *
  * @author Dennis Kjellin
- * @package StarterWP
+ * @package StarterTheme
  */
 
 get_header(); ?>

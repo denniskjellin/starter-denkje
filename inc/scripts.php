@@ -4,7 +4,7 @@
  * Enqueue scripts and styles
  *
  * @author Dennis Kjellin
- * @package StarterWP
+ * @package StarterTheme
  */
 function enqueue_custom_styles()
 {
@@ -13,7 +13,7 @@ function enqueue_custom_styles()
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
-// Enqueue Bootstrap CSS and JavaScript
+// Enqueue Bootstrap CSS and JavaScript (root file js/main.js and style.css), compiled from node_modules with Gulp.
 function enqueue_bootstrap()
 {
     // Enqueue Bootstrap CSS

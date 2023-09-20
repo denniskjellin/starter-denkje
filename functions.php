@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * StarterTheme functions and definitions
+ *
+ * @author Dennis Kjellin
+ * @package StarterTheme
+ */
 
 // Register Bootstrap 5 Nav Walker
 if (!function_exists('register_navwalker')) :
@@ -15,5 +21,5 @@ add_action('after_setup_theme', 'register_navwalker');
 	# Requirements
 	--------------------------------------------------------------*/
 
-// Add CSS/JS Sripts
+// Include scripts
 require get_template_directory() . '/inc/scripts.php';
