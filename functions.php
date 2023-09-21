@@ -23,3 +23,4 @@ add_action('after_setup_theme', 'register_navwalker');
 
 // Include scripts
 require get_template_directory() . '/inc/scripts.php';
+require get_template_directory() . '/lib/acf-blocks/class-admin-option-page.php';
