@@ -1,5 +1,5 @@
 </div>
-</div>
+
 <footer class="site-footer" role="contentinfo">
     <div class="container p-4">
         <div class="row">
@@ -53,6 +53,7 @@
     </div>
     <?php get_footer(); ?>
 </footer>
+</div>
 </body>
 
 </html>
