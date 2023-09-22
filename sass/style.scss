@@ -7,13 +7,16 @@ Text Domain: text-domain
 Tags: Bootstrap 5, Bootstrap Icons
 */
 
-// Import Bootstrap's SCSS files
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+@import 'vars/vars';
+
+// Import Bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
 
-// Import custom SCSS files
-@import 'base';
-
-// Import custom SCSS files for components
-@import 'vars/vars';
+/*--------------------------------------------------------------
+# Theme Styles and Layout
+--------------------------------------------------------------*/
 @import 'site/site';
