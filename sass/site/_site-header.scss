@@ -1,5 +1,5 @@
 .site-header {
-	background-color: $primary-color;
+	background-color: #f5f5f5;
 }
 
 /* Custom CSS for the navbar */
@@ -9,49 +9,45 @@
 	left: 0;
 	right: 0;
 	z-index: 1000; /* Adjust this value as needed */
-	background-color: $primary-color;
+	background-color: #f5f5f5;
 
+	/*Dropdown menu styling*/
 	.dropdown-menu {
-		background-color: $primary-color;
+		background-color: #f5f5f5;
 		width: 15rem;
 		border-radius: 0%;
 		border: none;
-		box-shadow: 0px 2px 0px 0px $primary-shadow;
+		box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		animation: myAnim 0.2s ease 0s 1 normal forwards;
 
+		/*dropdown active menu item*/
 		.active {
-			background-color: $primary-color;
-			color: $primary-orange;
-			font-weight: 450;
-			text-decoration: underline;
+			background-color: #f5f5f5;
+			color: #ec6346;
+			text-decoration: none;
 		}
+	}
 
-		a:hover {
-			color: $primary-orange;
-			background-color: $primary-color;
-		}
+	/*dropdown submenu hover */
+	a:hover {
+		color: $primary-orange;
+		background-color: #f5f5f5;
+	}
 
-		a {
-			@keyframes myAnim {
-				0% {
-					opacity: 0;
-					transform: translateY(-10px);
-				}
+	/*dropdown submenu animation */
+	a {
+		@keyframes myAnim {
+			0% {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
 
-				100% {
-					opacity: 1;
-					transform: translateY(0);
-				}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
 			}
 		}
 	}
-}
-
-.active a {
-	background-color: $primary-color;
-	color: $primary-orange;
-	font-weight: 450;
-	text-decoration: underline;
 }
 
 /* Custom CSS for the navbar-brand */
