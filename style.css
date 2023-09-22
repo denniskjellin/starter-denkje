@@ -11862,9 +11862,33 @@ textarea.form-control-lg {
 /*--------------------------------------------------------------
 # Site styles, imported in 'style.scss' in sass root.
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Footer Container
+--------------------------------------------------------------*/
 .site-footer {
   background-color: #f5f5f5;
   margin-top: auto;
+  /* Headings*/
+  /*Un-ordered list*/
+  /*Links*/
+}
+.site-footer h2, .site-footer .h2,
+.site-footer h3,
+.site-footer .h3 {
+  font-size: 1.3rem;
+}
+.site-footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+.site-footer li a {
+  color: #6c757d;
+  text-decoration: none;
+  transition: var(--main-transition);
+}
+.site-footer li a:hover {
+  color: black;
+  text-decoration: underline;
 }
 
 .site-header {
