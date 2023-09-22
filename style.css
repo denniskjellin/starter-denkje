@@ -11891,6 +11891,11 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+.navbar-brand img {
+  width: 75px;
+  height: 75px;
+}
+
 .site-header {
   background-color: #f5f5f5;
 }

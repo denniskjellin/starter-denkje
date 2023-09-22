@@ -13,7 +13,17 @@
         <header class="site-header">
             <nav class="main-navbar navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+
+                    <a class="navbar-brand" href="#">
+                        <?php
+                        $image = get_field('logo-img', 'options');
+                        if (!empty($image)) {
+                        ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php
+                        };
+                        ?>
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
