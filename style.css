@@ -11866,7 +11866,7 @@ textarea.form-control-lg {
 # Footer Container
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #f5f5f5;
+  background-color: #343a40;
   margin-top: auto;
   /* Headings*/
   /*Un-ordered list*/
@@ -11876,6 +11876,7 @@ textarea.form-control-lg {
 .site-footer h3,
 .site-footer .h3 {
   font-size: 1.3rem;
+  color: white;
 }
 .site-footer ul {
   list-style: none;
@@ -11885,10 +11886,13 @@ textarea.form-control-lg {
   color: #6c757d;
   text-decoration: none;
   transition: var(--main-transition);
+  color: rgba(245, 245, 245, 0.61);
 }
 .site-footer li a:hover {
-  color: black;
-  text-decoration: underline;
+  color: #ec6346;
+}
+.site-footer p {
+  color: rgba(245, 245, 245, 0.61);
 }
 
 .navbar-brand img {
@@ -11908,6 +11912,34 @@ textarea.form-control-lg {
   right: 0;
   z-index: 1000; /* Adjust this value as needed */
   background-color: #f5f5f5;
+}
+.main-navbar .dropdown-menu {
+  background-color: #f5f5f5;
+  width: 15rem;
+  border-radius: 0%;
+  border: none;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
+  animation: myAnim 0.2s ease 0s 1 normal forwards;
+}
+.main-navbar .dropdown-menu .active {
+  background-color: #f5f5f5;
+  color: #ec6346;
+  font-weight: 450;
+  text-decoration: underline;
+}
+.main-navbar .dropdown-menu a:hover {
+  color: #ec6346;
+  background-color: #f5f5f5;
+}
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Custom CSS for the navbar-brand */
@@ -11934,3 +11966,4 @@ textarea.form-control-lg {
 /*--------------------------------------------------------------
 # Colors
 --------------------------------------------------------------*/
+/* Theme Colors */

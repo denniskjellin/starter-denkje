@@ -14,7 +14,7 @@
             <nav class="main-navbar navbar navbar-expand-lg">
                 <div class="container-fluid">
 
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                         <?php
                         $image = get_field('logo-img', 'options');
                         if (!empty($image)) {
