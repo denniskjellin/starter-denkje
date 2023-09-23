@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const browserSync = require('browser-sync').create();
+const purgecss = require('gulp-purgecss');
 
 // Import Bootstrap styles
 const bootstrapSass = 'node_modules/bootstrap/scss/bootstrap.scss';
@@ -33,6 +34,20 @@ gulp.task('styles', function () {
 	return gulp.src('sass/*.scss').pipe(sass().on('error', sass.logError)).pipe(gulp.dest('./'));
 });
 
+// Purge unused CSS from style.css and create style.min.css
+gulp.task('purgecss', function () {
+	return gulp
+		.src('style.css') // Modify to the path of your main CSS file
+		.pipe(
+			purgecss({
+				content: ['**/*.php'], // Use PHP files as content to scan for used CSS
+				// Add any additional options as needed
+			})
+		)
+		.pipe(concat('style.min.css'))
+		.pipe(gulp.dest('./'));
+});
+
 // Start local development server
 gulp.task('server', function () {
 	browserSync.init({
@@ -50,5 +65,5 @@ gulp.task('watch', function () {
 	gulp.watch('node_modules/bootstrap/dist/js/**/*.js', gulp.series('bootstrap-js')).on('change', browserSync.reload);
 });
 
-// Define a default task that includes "serve"
-gulp.task('default', gulp.series('bootstrap', 'bootstrap-js', 'styles', gulp.parallel('server', 'watch')));
+// Define a default task that includes "serve", "purgecss", and other tasks
+gulp.task('default', gulp.series('bootstrap', 'bootstrap-js', 'styles', 'purgecss', gulp.parallel('server', 'watch')));
