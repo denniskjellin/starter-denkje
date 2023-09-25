@@ -852,6 +852,15 @@ output {
 
 .site-header {
   background-color: #f5f5f5;
+  /*dropdown active menu item*/
+}
+.site-header .navbar-nav .nav-link.active {
+  color: #ec6346;
+  text-decoration: none;
+}
+.site-header .active {
+  background-color: #f5f5f5;
+  color: #ec6346;
 }
 
 /* Custom CSS for the navbar */
@@ -873,12 +882,6 @@ output {
   border: none;
   box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
   animation: myAnim 0.2s ease 0s 1 normal forwards;
-  /*dropdown active menu item*/
-}
-.main-navbar .dropdown-menu .active {
-  background-color: #f5f5f5;
-  color: #ec6346;
-  text-decoration: none;
 }
 .main-navbar a:hover {
   color: #ec6346;

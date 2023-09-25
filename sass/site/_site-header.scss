@@ -1,5 +1,19 @@
 .site-header {
 	background-color: $primary-color;
+
+	.navbar-nav .nav-link.active {
+		color: $primary-orange;
+		text-decoration: none;
+	}
+	.current_page_ancestor > a {
+		color: $primary-orange;
+		text-decoration: none;
+	}
+	/*dropdown active menu item*/
+	.active {
+		background-color: $primary-color;
+		color: $primary-orange;
+	}
 }
 
 /* Custom CSS for the navbar */
@@ -19,13 +33,6 @@
 		border: none;
 		box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		animation: myAnim 0.2s ease 0s 1 normal forwards;
-
-		/*dropdown active menu item*/
-		.active {
-			background-color: $primary-color;
-			color: $primary-orange;
-			text-decoration: none;
-		}
 	}
 
 	/*dropdown submenu hover */
