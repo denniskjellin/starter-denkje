@@ -11970,11 +11970,6 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-/* Add padding to the content to prevent it from being hidden behind the navbar */
-.site-content {
-  padding-top: 5rem; /* Adjust the value to match your navbar height */
-}
-
 /* ID - Page container (div)*/
 #page {
   min-height: 100vh;
@@ -11987,4 +11982,25 @@ textarea.form-control-lg {
 .navbar-brand img {
   width: 75px;
   height: 75px;
+}
+
+.hero-container {
+  overflow: hidden;
+  position: relative;
+  max-height: 525px;
+}
+.hero-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Add a smooth transition */
+  object-fit: cover;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
