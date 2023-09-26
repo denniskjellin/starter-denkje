@@ -11970,6 +11970,11 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
+/* Add padding to the content to prevent it from being hidden behind the navbar */
+.site-content {
+  padding-bottom: 5rem; /* Adjust the value to match your navbar height */
+}
+
 /* ID - Page container (div)*/
 #page {
   min-height: 100vh;
