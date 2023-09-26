@@ -17,6 +17,9 @@ if (!function_exists('register_navwalker')) :
 endif;
 add_action('after_setup_theme', 'register_navwalker');
 
+// Custom images
+add_image_size('heroImage', 1700, 700, true);
+
 
 /*-------------------------------------------------------------
 # Requirements
