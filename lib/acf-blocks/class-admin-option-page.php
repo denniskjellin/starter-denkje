@@ -3,8 +3,8 @@
 /**
  * Class: ACF option page
  *
- * @author Henrik Pettersson <henrik.pettersson@knowit.se>
- * @package impact-innovation
+ * @author Dennis Kjellin 
+ * @package Starter Denkje
  */
 
 if (function_exists('acf_add_options_page')) {
@@ -17,6 +17,7 @@ if (function_exists('acf_add_options_page')) {
         'redirect'      => false
     ));
 
+    // Footer 
     acf_add_options_sub_page(array(
         'page_title'    => 'Footer',
         'menu_title'    => 'Footer',
@@ -29,4 +30,12 @@ if (function_exists('acf_add_options_page')) {
         'menu_title'    => 'Hero image',
         'parent_slug'   => 'theme-general-settings',
     ));
+
+    // Banner-image
+    // acf_add_options_sub_page(array(
+    // 'page_title' => 'Page banner image',
+    // 'menu_title' => 'Page banner image',
+    // 'parent_slug' => 'theme-general-settings'
+    // ));
+    
 }

@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Page banner container
+--------------------------------------------------------------*/
+.page-banner {
+	background-color: #000;
+	padding: 250px 0 40px 0;
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+# page banner background image container div
+--------------------------------------------------------------*/
+.page-banner-bg-image {
+	opacity: 0.4;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/*--------------------------------------------------------------
+# page banner content, title and subtitle
+--------------------------------------------------------------*/
+.page-banner-intro {
+	font-weight: 300;
+	line-height: 1.3;
+	color: #ededed;
+	transform: translateY(-100%);
+
+	p {
+		margin: 0;
+		font-size: 1.8rem;
+	}
+}
+
+/*--------------------------------------------------------------
+# Breakpoints for smaler screens
+--------------------------------------------------------------*/
+@media (max-width: 440px) {
+	.page-banner-intro {
+		p {
+			font-size: 1.3rem;
+		}
+		h1 {
+			font-size: 1.6rem;
+		}
+	}
+}

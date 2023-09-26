@@ -17,10 +17,12 @@ if (!function_exists('register_navwalker')) :
 endif;
 add_action('after_setup_theme', 'register_navwalker');
 
+
 /*-------------------------------------------------------------
-	# Requirements
-	--------------------------------------------------------------*/
+# Requirements
+--------------------------------------------------------------*/
 
 // Include scripts
 require get_template_directory() . '/inc/scripts.php';
 require get_template_directory() . '/lib/acf-blocks/class-admin-option-page.php';
+require get_template_directory() . '/lib/custom/page-banner.php';
