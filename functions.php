@@ -29,3 +29,4 @@ add_image_size('heroImage', 1700, 700, true);
 require get_template_directory() . '/inc/scripts.php';
 require get_template_directory() . '/lib/acf-blocks/class-admin-option-page.php';
 require get_template_directory() . '/lib/custom/page-banner.php';
+require get_template_directory() . '/lib/custom/hero-image.php';
