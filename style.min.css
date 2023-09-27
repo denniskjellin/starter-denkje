@@ -994,6 +994,11 @@ output {
   margin-right: 0;
 }
 
+/* Add padding to the content to prevent it from being hidden behind the navbar */
+.site-content {
+  padding-bottom: 5rem; /* Adjust the value to match your navbar height */
+}
+
 /* ID - Page container (div)*/
 #page {
   min-height: 100vh;
@@ -1011,7 +1016,7 @@ output {
 .hero-container {
   overflow: hidden;
   position: relative;
-  max-height: 525px;
+  max-height: 500px;
 }
 .hero-container img {
   width: 100%;
