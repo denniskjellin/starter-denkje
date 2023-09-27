@@ -2,6 +2,8 @@
 	overflow: hidden;
 	position: relative;
 	max-height: 500px;
+	/*Validation fix bg-color black*/
+	background-color: black;
 
 	img {
 		width: 100%;
