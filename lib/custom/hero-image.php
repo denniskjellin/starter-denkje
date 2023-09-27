@@ -12,8 +12,8 @@ function heroImage() {
     <div class="hero-text">
         <h1><?php echo $hero_headline; ?></h1>
         <p><?php echo $hero_paragraph; ?></p>
-        <a href="<?php echo $hero_button['hero_button_url']['url'] ;?>" class="btn btn-primary" role="button"
-            aria-label="<?php echo $hero_button['hero_button_text'] ;?>"><?php echo $hero_button['hero_button_text'] ;?></a>
+        <a href="<?php echo $hero_button['hero_button_url']['url'] ;?>" class="hero-btn"
+            role="button"><?php echo $hero_button['hero_button_text'] ;?></a>
     </div>
 </div>
 <?php

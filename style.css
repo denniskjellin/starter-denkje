@@ -11904,10 +11904,10 @@ textarea.form-control-lg {
   color: #6c757d;
   text-decoration: none;
   transition: var(--main-transition);
-  color: rgba(245, 245, 245, 0.61);
+  color: rgba(245, 245, 245, 0.6117647059);
 }
 .site-footer li a:hover {
-  color: #ec6346;
+  color: #e85d04;
 }
 .site-footer p {
   color: rgba(245, 245, 245, 0.61);
@@ -11918,16 +11918,16 @@ textarea.form-control-lg {
   /*dropdown active menu item*/
 }
 .site-header .navbar-nav .nav-link.active {
-  color: #ec6346;
+  color: #e85d04;
   text-decoration: none;
 }
 .site-header .current_page_ancestor > a {
-  color: #ec6346;
+  color: #e85d04;
   text-decoration: none;
 }
 .site-header .active {
   background-color: #f5f5f5;
-  color: #ec6346;
+  color: #e85d04;
 }
 
 /* Custom CSS for the navbar */
@@ -11951,7 +11951,7 @@ textarea.form-control-lg {
   animation: myAnim 0.2s ease 0s 1 normal forwards;
 }
 .main-navbar a:hover {
-  color: #ec6346;
+  color: #e85d04;
   background-color: #f5f5f5;
 }
 @keyframes myAnim {
@@ -11993,12 +11993,15 @@ textarea.form-control-lg {
   overflow: hidden;
   position: relative;
   max-height: 500px;
+  /*Validation fix bg-color black*/
+  background-color: black;
 }
 .hero-container img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease; /* Add a smooth transition */
   object-fit: cover;
+  opacity: 0.9;
 }
 
 .hero-text {
@@ -12023,7 +12026,7 @@ textarea.form-control-lg {
 # page banner background image container div
 --------------------------------------------------------------*/
 .page-banner-bg-image {
-  opacity: 0.4;
+  opacity: 0.5;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -12056,4 +12059,18 @@ textarea.form-control-lg {
   .page-banner-intro h1, .page-banner-intro .h1 {
     font-size: 1.6rem;
   }
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #574672;
+  transition: background-color 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+
+.hero-btn:hover {
+  background-color: #d35400;
 }
