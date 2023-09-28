@@ -9,10 +9,8 @@
 get_header(); 
 
 /* Get the pager banner image if there is one */
-if (get_field('page_banner_background_image')) 
-{
 pageBanner();
-}
+
 ?>
 
 <div class="container pt-5">
@@ -24,7 +22,7 @@ pageBanner();
                 If there is no page banner and no page banner title, then display the page title as an h1
                 else display the page title as an h2
                 */
-                if (!get_field('page_banner_background_image') || (!get_field('page_banner_title'))) 
+                if ((!get_field('page_banner_title'))) 
                     {
                         ?>
                 <h1 class="h1"><?php the_title(); ?></h1>
