@@ -33,6 +33,7 @@ if (get_field('hero_image', 'option'))
                 ?>
                 <?php the_content(); ?>
             </div>
+            <h2>heyho front-page</h2>
         </main>
     </div>
 </div>
