@@ -1,26 +1,24 @@
 <?php
-
 /**
  * The template for displaying a page
- * @author Dennis Kjellin
  * @package Starter Denkje
  */
 
-get_header(); 
+get_header();
 
 /* Get the pager banner image if there is one */
 pageBanner();
-
 ?>
+
 <div class="container">
     <?php
-      // Get the previous page URL
-      $previous_page_url = wp_get_referer();
+    // Get the previous page URL
+    $previous_page_url = wp_get_referer();
 
-      if ($previous_page_url) {
+    if ($previous_page_url) {
         // Get the title of the previous page
         $previous_page_title = get_the_title(url_to_postid($previous_page_url));
-        
+
         if ($previous_page_title) { ?>
     <div class="metabox metabox-position-up metabox-with-home-link">
         <p>
@@ -32,19 +30,54 @@ pageBanner();
         </p>
     </div>
     <?php }
-      }
+    }
     ?>
 </div>
 
 <div class="container pt-4">
     <div id="primary" class="content-area">
-        <main id="main" class="site-main row" role="main">
-            <div class="col-md-12">
-                <?php the_content(); ?>
-                <p>index.php</p>
-            </div>
+        <main id="main" class="site-main" role="main">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-8">
+                        <?php
+                        // Define a custom query to retrieve posts
+                        $custom_query = new WP_Query(array(
+                            'post_type' => 'post', // You can change this to another post type if needed
+                            'posts_per_page' => -1 // Display all posts
+                        ));
+
+                        if ($custom_query->have_posts()) :
+                            while ($custom_query->have_posts()) : $custom_query->the_post();
+                        ?>
+                        <!-- Your post content here -->
+                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                        <div class="post-content">
+                            <?php the_excerpt(); ?>
+                        </div>
+                        <?php
+                            endwhile;
+                            wp_reset_postdata();
+                        else :
+                            echo 'No posts found';
+                        endif;
+                        ?>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Sidebar content -->
+                        <h2>Sidebar</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad corporis quae quasi nesciunt sed libero, expedita repellat hic
+                            quis adipisci deleniti quas voluptatibus voluptas dolor facere, odio earum, quod ipsam.
+                            Voluptatum esse ipsum officia nemo veritatis fugiat veniam molestiae, obcaecati atque fuga maxime qui, est nihil voluptate
+                            at
+                            nulla dolores doloremque, dolor incidunt exercitationem beatae corporis. Earum veritatis sapiente minus.</p>
+                    </div>
+                </div><!-- .row -->
+            </div><!-- .container -->
         </main>
     </div>
 </div>
 
-<?php get_footer();
+<?php get_footer(); ?>
