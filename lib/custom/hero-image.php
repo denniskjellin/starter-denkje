@@ -1,6 +1,8 @@
 <?php
 
-// Hero Image
+/*--------------------------------------------------------------
+# hero image function for the home page
+--------------------------------------------------------------*/
 function heroImage() {
     $hero_image = get_field('hero_image', 'option');
     $hero_headline = get_field('hero_headline', 'option');
