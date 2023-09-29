@@ -8,7 +8,7 @@ function pageBanner() {
     // Check if the page_banner_background_image field is empty or not set
     if (!$pageBannerImage) {
         // Provide a hardcoded fallback image path
-        $pageBannerImage = get_theme_file_uri('/images/alpcounty.jpeg');
+        $pageBannerImage = get_theme_file_uri('/images/alpdawn.jpg');
     } else if (array($pageBannerImage) && !empty($pageBannerImage['sizes']['pageBanner'])) {
         // Get the image URL from the ACF field
         $pageBannerImage = $pageBannerImage['sizes']['pageBanner'];
