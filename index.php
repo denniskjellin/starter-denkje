@@ -39,8 +39,6 @@ pageBanner();
         <main id="main" class="site-main" role="main">
             <div class="container">
                 <div class="row">
-
-
                     <div class="col-md-8">
                         <?php
                         // Define a custom query to retrieve posts
@@ -53,8 +51,14 @@ pageBanner();
                             while ($custom_query->have_posts()) : $custom_query->the_post();
                         ?>
                         <!-- Your post content here -->
-                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
                         <div class="post-content">
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <?php 
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('medium');
+                                }
+                            ?>
                             <?php the_excerpt(); ?>
                         </div>
                         <?php

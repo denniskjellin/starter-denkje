@@ -21,6 +21,9 @@ add_action('after_setup_theme', 'register_navwalker');
 add_image_size('heroImage', 1700, 700, true);
 
 
+// Add theme support
+add_theme_support( 'post-thumbnails' );
+
 /*-------------------------------------------------------------
 # Requirements
 --------------------------------------------------------------*/

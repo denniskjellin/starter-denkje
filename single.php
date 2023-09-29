@@ -17,6 +17,8 @@ pageBanner();
     <div id="primary" class="content-area">
         <main id="main" class="site-main row" role="main">
             <div class="col-md-12">
+                <!--get the post thumbnail -->
+
                 <?php the_content(); ?>
             </div>
         </main>
