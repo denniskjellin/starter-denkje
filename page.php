@@ -14,16 +14,28 @@ pageBanner();
 ?>
 <div class="container">
     <?php
-      $theParent = wp_get_post_parent_id(get_the_ID());
-      if ($theParent) { ?>
+      // Get the previous page URL
+      $previous_page_url = wp_get_referer();
+
+      if ($previous_page_url) {
+        // Get the title of the previous page
+        $previous_page_title = get_the_title(url_to_postid($previous_page_url));
+        
+        if ($previous_page_title) { ?>
     <div class="metabox metabox-position-up metabox-with-home-link">
-        <p><a class="metabox-blog-home-link" href="<?php echo get_permalink($theParent); ?>"><i class="bi bi-house-door" aria-hidden="true"></i> Back
-                to
-                <?php echo get_the_title($theParent); ?></a> <span class="metabox-main"><?php the_title(); ?></span></p>
+        <p>
+            <a class="metabox-blog-home-link" href="<?php echo esc_url($previous_page_url); ?>">
+                Return to <?php echo esc_html($previous_page_title); ?>
+                <span class="bi bi-arrow-left" aria-hidden="true"></span> <!-- Add your Bootstrap icon here -->
+            </a>
+            <span class="metabox-main"><?php the_title(); ?></span>
+        </p>
     </div>
     <?php }
+      }
     ?>
 </div>
+
 <div class="container pt-4">
     <div id="primary" class="content-area">
         <main id="main" class="site-main row" role="main">
