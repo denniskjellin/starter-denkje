@@ -7,13 +7,14 @@ function heroImage() {
     $hero_paragraph = get_field('hero_paragraph', 'option');
     $hero_button = get_field('hero_button', 'option');
     ?>
-<div class="hero-container p-0">
-    <img src="<?php echo $hero_image['url']; ?>" alt="<?php echo $hero_image['alt']; ?>" />
-    <div class="hero-text">
-        <h1><?php echo $hero_headline; ?></h1>
-        <p><?php echo $hero_paragraph; ?></p>
-        <a href="<?php echo $hero_button['hero_button_url']['url'] ;?>" class="hero-btn"
-            role="button"><?php echo $hero_button['hero_button_text'] ;?></a>
+<div class="hero-container">
+    <div class="hero-bg-image" style="background-image: url(<?php echo esc_url($hero_image['url']); ?>)">
+        <div class="hero-intro-wraper">
+            <h1><?php echo $hero_headline; ?></h1>
+            <p><?php echo $hero_paragraph; ?></p>
+            <a href="<?php echo $hero_button['hero_button_url']['url'] ;?>" class="hero-btn"
+                role="button"><?php echo $hero_button['hero_button_text'] ;?></a>
+        </div>
     </div>
 </div>
 <?php

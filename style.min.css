@@ -807,6 +807,10 @@ output {
   padding: 1.5rem !important;
 }
 
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
 .pt-5 {
   padding-top: 3rem !important;
 }
@@ -954,6 +958,21 @@ output {
   color: white;
 }
 
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #574672;
+  transition: background-color 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+
+.hero-btn:hover {
+  background-color: #d35400;
+}
+
 /*--------------------------------------------------------------
 # Page banner container
 --------------------------------------------------------------*/
@@ -1001,17 +1020,37 @@ output {
     font-size: 1.6rem;
   }
 }
-.hero-btn {
+.metabox {
+  background-color: #c24e00;
+  border-radius: 3px;
   display: inline-block;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.07);
+  top: 0;
+  transform: translateY(-50%);
+}
+.metabox a {
   text-decoration: none;
+}
+.metabox p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: white;
+}
+.metabox .metabox-blog-home-link {
+  background-color: #343a40;
   color: #fff;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 5px;
-  background-color: #574672;
-  transition: background-color 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 3px 0 0 3px;
 }
 
-.hero-btn:hover {
-  background-color: #d35400;
+.metabox-main {
+  padding: 10px 15px 10px 11px;
+}
+
+.metabox .metabox-blog-home-link:hover {
+  text-decoration: none;
+  background-color: #574672;
+  transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+  text-decoration: underline;
 }

@@ -11989,22 +11989,32 @@ textarea.form-control-lg {
   height: 75px;
 }
 
+/*--------------------------------------------------------------
+# Hero image container
+--------------------------------------------------------------*/
 .hero-container {
-  overflow: hidden;
+  background-color: #000;
+  padding: 400px 0 40px 0;
   position: relative;
-  max-height: 500px;
-  /*Validation fix bg-color black*/
-  background-color: black;
-}
-.hero-container img {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease; /* Add a smooth transition */
-  object-fit: cover;
-  opacity: 0.9;
 }
 
-.hero-text {
+/*--------------------------------------------------------------
+# page banner background image container div
+--------------------------------------------------------------*/
+.hero-bg-image {
+  opacity: 0.9;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*--------------------------------------------------------------
+# hero intro, title, subtitle and button
+--------------------------------------------------------------*/
+.hero-intro-wraper {
   text-align: center;
   position: absolute;
   top: 50%;
@@ -12028,6 +12038,17 @@ textarea.form-control-lg {
   background-color: #d35400;
 }
 
+/*--------------------------------------------------------------
+# Breakpoints for smaler screens
+--------------------------------------------------------------*/
+@media (max-width: 440px) {
+  .hero-intro-wraper p {
+    font-size: 1.3rem;
+  }
+  .hero-intro-wraper h1, .hero-intro-wraper .h1 {
+    font-size: 1.6rem;
+  }
+}
 /*--------------------------------------------------------------
 # Page banner container
 --------------------------------------------------------------*/
