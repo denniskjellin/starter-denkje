@@ -10,6 +10,12 @@ function pageBanner() {
         $pageTitle = get_the_title(); // Get the title for regular pages
     }
 
+    if (is_home()) {
+        $pageBannerSubtitle = get_field('page_banner_subtitle', get_option('page_for_posts'));
+    } else {
+        $pageBannerSubtitle = get_field('page_banner_subtitle');
+    }
+
     $pageBannerImage = get_field('page_banner_background_image');
 
     // Check if the page_banner_background_image field is empty or not set
@@ -29,7 +35,7 @@ function pageBanner() {
     <div class="page-banner-intro">
         <div class="container">
             <h1 class="h1"><?php echo esc_html($pageTitle); ?></h1>
-            <p><?php the_field('page_banner_subtitle') ?></p>
+            <p><?php echo esc_html($pageBannerSubtitle); ?></p>
         </div>
     </div>
 </div>
