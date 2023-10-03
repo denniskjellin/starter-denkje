@@ -12146,11 +12146,42 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+/*--------------------------------------------------------------
+# Post page
+# Settings for big screens
+--------------------------------------------------------------*/
 .post-content {
   margin-bottom: 3rem;
+  /*--------------------------------------------------------------
+  # Settings for smaler screens
+  --------------------------------------------------------------*/
 }
 .post-content .post-title a {
   color: red;
+}
+.post-content p {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75ch;
+  margin-top: 0.5rem;
+  margin-right: 2rem;
+}
+.post-content img {
+  width: 65%;
+  height: 65%;
+}
+@media (max-width: 991.98px) {
+  .post-content .btn-readmore {
+    display: block;
+  }
+  .post-content img {
+    width: 100%;
+    height: 100%;
+  }
+  .post-content p {
+    margin-right: 0rem;
+  }
 }
 
 .post-content:last-child {

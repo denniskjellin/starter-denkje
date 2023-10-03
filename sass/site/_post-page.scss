@@ -1,11 +1,50 @@
+/*--------------------------------------------------------------
+# Post page
+# Settings for big screens
+--------------------------------------------------------------*/
 .post-content {
 	margin-bottom: 3rem;
 
 	.post-title a {
 		color: red;
 	}
+
+	p {
+		white-space: wrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 75ch;
+		margin-top: 0.5rem;
+		margin-right: 2rem;
+	}
+
+	// on big screens display image at the selected size
+	img {
+		width: 65%;
+		height: 65%;
+	}
+
+	/*--------------------------------------------------------------
+	# Settings for smaler screens
+	--------------------------------------------------------------*/
+
+	@include media-breakpoint-down(lg) {
+		.btn-readmore {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		p {
+			margin-right: 0rem;
+		}
+	}
 }
 
+// Remove padding from the last post towards the footer.
 .post-content:last-child {
 	margin-bottom: 0rem;
 }
