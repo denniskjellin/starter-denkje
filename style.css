@@ -17,6 +17,7 @@ Tags: Bootstrap 5, Bootstrap Icons
 # Colors
 --------------------------------------------------------------*/
 /* Theme Colors */
+/* Buttons color */
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -12096,6 +12097,20 @@ textarea.form-control-lg {
     font-size: 1.6rem;
   }
 }
+/*--------------------------------------------------------------
+    # Buttons
+    --------------------------------------------------------------*/
+.btn-readmore {
+  background-color: #574672;
+  color: #fff;
+  transition: background-color 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+
+.btn-readmore:hover {
+  background-color: #d35400;
+  color: #fff;
+}
+
 .metabox {
   background-color: #c24e00;
   border-radius: 3px;
@@ -12129,4 +12144,15 @@ textarea.form-control-lg {
   background-color: #574672;
   transition: background-color 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
   text-decoration: underline;
+}
+
+.post-content {
+  margin-bottom: 3rem;
+}
+.post-content .post-title a {
+  color: red;
+}
+
+.post-content:last-child {
+  margin-bottom: 0rem;
 }

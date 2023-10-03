@@ -1,0 +1,11 @@
+.post-content {
+	margin-bottom: 3rem;
+
+	.post-title a {
+		color: red;
+	}
+}
+
+.post-content:last-child {
+	margin-bottom: 0rem;
+}

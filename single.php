@@ -14,15 +14,11 @@ pageBanner();
 ?>
 
 <div class="container pt-5">
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main row" role="main">
-            <div class="col-md-12">
-                <!--get the post thumbnail -->
-
-                <?php the_content(); ?>
-            </div>
-        </main>
-    </div>
+    <main id="main" class="site-main row" role="main">
+        <div class="col-md-12">
+            <?php the_content(); ?>
+        </div>
+    </main>
 </div>
 
 <?php get_footer();

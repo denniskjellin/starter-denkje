@@ -38,12 +38,12 @@
 	padding: 10px 20px;
 	font-size: 18px;
 	border-radius: 5px;
-	background-color: #574672;
+	background-color: $btn-purple;
 	transition: background-color 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
 }
 
 .hero-btn:hover {
-	background-color: #d35400;
+	background-color: $btn-purple-hover;
 }
 
 /*--------------------------------------------------------------

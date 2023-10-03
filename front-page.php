@@ -16,26 +16,23 @@ if (get_field('hero_image', 'option'))
 }
 ?>
 
-<div class="container">
-    <div id="primary" class="content-area pt-5">
-        <main id="main" class="site-main row" role="main">
-            <div class="col-md-12">
-                <?php 
+<div class="container pt-5">
+    <main id="main" class="site-main row" role="main">
+        <div class="col-md-12">
+            <?php 
                     if (!get_field('hero_image', 'option')) {
                         ?>
-                <h1><?php the_title(); ?></h1>
-                <?php
+            <h1><?php the_title(); ?></h1>
+            <?php
                     } else {
                         ?>
-                <h2><?php the_title(); ?></h2>
-                <?php
+            <h2><?php the_title(); ?></h2>
+            <?php
                     }
                 ?>
-                <?php the_content(); ?>
-            </div>
-            <h2>heyho front-page</h2>
-        </main>
-    </div>
+            <?php the_content(); ?>
+        </div>
+    </main>
 </div>
 
 <?php get_footer();

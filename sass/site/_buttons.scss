@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+    # Buttons
+    --------------------------------------------------------------*/
+
+// Button readmore, on post pages.
+.btn-readmore {
+	background-color: $btn-purple;
+	color: #fff;
+	transition: background-color 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+
+.btn-readmore:hover {
+	background-color: $btn-purple-hover;
+	color: #fff;
+}
