@@ -20,8 +20,8 @@
 
 	// on big screens display image at the selected size
 	img {
-		width: 65%;
-		height: 65%;
+		border-radius: 0.2rem;
+		box-shadow: $box-shadow-sm;
 	}
 
 	/*--------------------------------------------------------------

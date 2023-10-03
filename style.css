@@ -12163,8 +12163,8 @@ textarea.form-control-lg {
   margin-right: 2rem;
 }
 .post-content img {
-  width: 65%;
-  height: 65%;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 @media (max-width: 991.98px) {
   .post-content .btn-readmore {

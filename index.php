@@ -70,12 +70,9 @@ pageBanner();
                 </article>
                 <div class="col-md-4">
                     <!-- Sidebar content -->
-                    <h2>Sidebar</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad corporis quae quasi nesciunt sed libero, expedita repellat hic
-                        quis adipisci deleniti quas voluptatibus voluptas dolor facere, odio earum, quod ipsam.
-                        Voluptatum esse ipsum officia nemo veritatis fugiat veniam molestiae, obcaecati atque fuga maxime qui, est nihil voluptate
-                        at
-                        nulla dolores doloremque, dolor incidunt exercitationem beatae corporis. Earum veritatis sapiente minus.</p>
+                    <aside id="custom-sidebar">
+                        <?php get_sidebar(); ?>
+                    </aside>
                 </div>
             </div><!-- .row -->
         </section><!-- .container -->
