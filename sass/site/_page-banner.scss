@@ -38,7 +38,7 @@
 /*--------------------------------------------------------------
 # Breakpoints for smaler screens
 --------------------------------------------------------------*/
-@media (max-width: 440px) {
+@include media-breakpoint-down(sm) {
 	.page-banner-intro {
 		p {
 			font-size: 1.3rem;

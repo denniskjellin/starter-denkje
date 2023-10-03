@@ -12042,12 +12042,12 @@ textarea.form-control-lg {
 /*--------------------------------------------------------------
 # Breakpoints for smaler screens
 --------------------------------------------------------------*/
-@media (max-width: 440px) {
+@media (max-width: 575.98px) {
   .hero-intro-wraper p {
     font-size: 1.3rem;
   }
   .hero-intro-wraper h1, .hero-intro-wraper .h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 /*--------------------------------------------------------------
@@ -12089,7 +12089,7 @@ textarea.form-control-lg {
 /*--------------------------------------------------------------
 # Breakpoints for smaler screens
 --------------------------------------------------------------*/
-@media (max-width: 440px) {
+@media (max-width: 575.98px) {
   .page-banner-intro p {
     font-size: 1.3rem;
   }
