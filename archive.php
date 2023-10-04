@@ -40,11 +40,26 @@ pageBanner();
             <div class="row">
                 <article class="col-md-8">
                     <?php
-                        // Define a custom query to retrieve posts
-                        $custom_query = new WP_Query(array(
-                            'post_type' => 'post', // You can change this to another post type if needed
-                            'posts_per_page' => -1 // Display all posts
-                        ));
+                        // Check if we are on an archive page (month/year)
+                        if (is_archive()) {
+                            // Get the selected month and year
+                            $year = get_query_var('year');
+                            $month = get_query_var('monthnum');
+                            
+                            // Define a custom query to retrieve posts for the selected month/year
+                            $custom_query = new WP_Query(array(
+                                'post_type' => 'post', // You can change this to another post type if needed
+                                'posts_per_page' => -1, // Display all posts
+                                'year' => $year,
+                                'monthnum' => $month,
+                            ));
+                        } else {
+                            // Default query for other pages
+                            $custom_query = new WP_Query(array(
+                                'post_type' => 'post', // You can change this to another post type if needed
+                                'posts_per_page' => -1, // Display all posts
+                            ));
+                        }
 
                         if ($custom_query->have_posts()) :
                             while ($custom_query->have_posts()) : $custom_query->the_post();
