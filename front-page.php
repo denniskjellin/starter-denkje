@@ -14,6 +14,7 @@ if (get_field('hero_image', 'option'))
 {
     heroImage();
 }
+
 ?>
 
 <div class="container pt-5">
