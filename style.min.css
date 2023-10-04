@@ -1213,7 +1213,9 @@ output {
 }
 
 .sidebar ul {
-  list-style: dotted;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .sidebar a {
   color: rgb(88, 88, 88);
