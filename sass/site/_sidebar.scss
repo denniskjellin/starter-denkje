@@ -1,0 +1,25 @@
+.sidebar-news {
+	@include media-breakpoint-down(md) {
+		margin-top: 2rem;
+	}
+}
+
+.sidebar {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	a {
+		color: rgb(88, 88, 88);
+	}
+
+	a:hover {
+		color: $primary-orange;
+	}
+
+	.bi-chevron-double-right {
+		font-size: 0.75rem;
+	}
+}

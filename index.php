@@ -69,10 +69,7 @@ pageBanner();
                         ?>
                 </article>
                 <div class="col-md-4">
-                    <!-- Sidebar content -->
-                    <aside id="custom-sidebar">
-                        <?php get_sidebar('news'); ?>
-                    </aside>
+                    <?php get_sidebar('news'); ?>
                 </div>
             </div><!-- .row -->
         </section><!-- .container -->

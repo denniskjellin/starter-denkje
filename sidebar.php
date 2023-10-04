@@ -1,4 +1,14 @@
-<aside class="sidebar sidebar-news">
+<aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+        <?php
+        // List categories
+        wp_list_categories(array(
+            'title_li' => '',
+        ));
+        ?>
+    </ul>
+
     <h3>Archive</h3>
     <ul>
         <?php
@@ -10,18 +20,7 @@
         ?>
     </ul>
 
-    <h3 class="mt-2">Categories</h3>
-    <ul>
-        <?php
-        // List categories
-        wp_list_categories(array(
-            'title_li' => '',
-        ));
-        ?>
-    </ul>
-
-
-    <h3 class="mt-2">Recent Posts</h3>
+    <h3>Recent Posts</h3>
     <ul>
         <?php
         // List recent posts
@@ -35,7 +34,7 @@
         if ($recent_posts->have_posts()) :
             while ($recent_posts->have_posts()) : $recent_posts->the_post();
         ?>
-        <li class="post-li"><a href="<?php the_permalink(); ?>"><?php the_title(); ?><i class="bi bi-chevron-double-right"></i></a></li>
+        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         <?php
             endwhile;
             wp_reset_postdata(); // Restore the global post object

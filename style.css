@@ -12182,3 +12182,24 @@ textarea.form-control-lg {
 .post-content:last-child {
   margin-bottom: 0rem;
 }
+
+@media (max-width: 767.98px) {
+  .sidebar-news {
+    margin-top: 2rem;
+  }
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar a {
+  color: rgb(88, 88, 88);
+}
+.sidebar a:hover {
+  color: #e85d04;
+}
+.sidebar .bi-chevron-double-right {
+  font-size: 0.75rem;
+}
